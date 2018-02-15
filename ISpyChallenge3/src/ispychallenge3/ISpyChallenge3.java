@@ -14,8 +14,47 @@ public class ISpyChallenge3 {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    static int numberOfPossibleCombinations(int input)
+    {
+        int numberOfCombinations = 0;
+        
+        if(input>200)
+        {
+            for(int i=8; i>0; i--)
+            {
+                numberOfCombinations+=i;
+            }
+
+            return numberOfCombinations;
+        }
+        else
+        {
+            if(input==200)
+            {
+                for(int i=7; i>0; i--)
+                {
+                    numberOfCombinations+=i;
+                }
+                
+                return numberOfCombinations+1;
+            }
+            else
+            {
+                for(int i=7; i>0; i--)
+                {
+                    numberOfCombinations+=i;
+                }
+
+                return numberOfCombinations;
+            }
+        }
+    }
+    
+    public static void main(String[] args)
+    {
+        int input =200;
+        
+        System.out.println("Number of different ways $2 can be made using any number of coins: "+numberOfPossibleCombinations(input));
     }
     
 }
