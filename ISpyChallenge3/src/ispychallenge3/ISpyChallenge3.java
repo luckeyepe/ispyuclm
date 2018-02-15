@@ -31,12 +31,12 @@ public class ISpyChallenge3 {
         {
             if(input==200)
             {
-                for(int i=7; i>0; i--)
+                for(int i=8; i>0; i--)
                 {
                     numberOfCombinations+=i;
                 }
                 
-                return numberOfCombinations+1;
+                return numberOfCombinations;
             }
             else
             {
